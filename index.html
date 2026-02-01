@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Do you love me?</title>
-  <link rel="stylesheet" href="do_you_love_me.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="do_you_love_me.css" />
 </head>
-<audio id="bg-music" src="love.mp3"></audio>
 <body>
 
-  <h1>Do you love me, <span class="name">kunjuuuu</span>? ❤️</h1>
-  <button class="yes-btn">Yes</button>
-  <button class="no-btn">No</button>
+  <div class="container">
+    <h1 id="question">Do you love me, <span class="name">KUNJUUUU</span>? ❤️</h1>
+
+    <div class="buttons">
+      <button class="yes-btn">Yes</button>
+      <button class="no-btn">No</button>
+    </div>
+  </div>
+
+  <!-- 🎵 MUSIC (must be inside body) -->
+  <audio id="bg-music" src="love.mp3" preload="auto"></audio>
 
   <script src="do_you_love_me.js"></script>
 </body>
