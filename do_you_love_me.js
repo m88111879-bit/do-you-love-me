@@ -14,7 +14,7 @@ yesBtn.addEventListener("click", () => {
   startHearts();
 
   setTimeout(() => {
-    window.location.href = "love-letters.html";
+    window.location.href = "love-letter.html?v=1";
   }, 5000);
 });
 
