@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8">
+  <title>എന്റെ പ്രിയപ്പെട്ട കുഞ്ഞൂ ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at bottom, #0b1d3a, #000);
+      overflow: hidden;
+      font-family: "Noto Sans Malayalam", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    /* ⭐ Stars */
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+
+    .letter {
+      background: rgba(255,255,255,0.95);
+      color: #333;
+      padding: 25px;
+      border-radius: 20px;
+      max-width: 350px;
+      text-align: center;
+      z-index: 10;
+      animation: fadeIn 2s ease;
+    }
+
+    h2 {
+      color: #ff2f68;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #ff2f68;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ⭐ Stars generator -->
+  <script>
+    for (let i = 0; i < 80; i++) {
+      const star = document.createElement("div");
+      star.className = "star";
+      star.style.width = star.style.height = Math.random() * 2 + 1 + "px";
+      star.style.top = Math.random() * 100 + "vh";
+      star.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <div class="letter">
+    <h2>എന്റെ കുഞ്ഞൂ ❤️</h2>
+
+    <p>
+      നീ എന്റെ ജീവിതത്തിലേക്ക് വന്നത് മുതൽ<br>
+      എല്ലാം കൂടുതൽ മനോഹരമായി. ആരും അത്രേം ഇടപിഴകാതിരുന്ന എന്റെ ജീവിതത്തിലേക്കു എന്നെ കുറച്ചെങ്കിലും മനസ്സിലാക്കുന്ന ഒരാളായി നീ കടന്നുവന്നു 🥺y💕<br><br>
+
+      നിന്റെ ചിരി വളരെ ഭംഗിയുള്ളതാണ് 😊<br>
+      നിന്റെ ശബ്ദം എന്റെ ആശ്വാസം എനിക്ക് സന്ദോഷമേക്കുന്നു 🕊️<br>
+      നിന്റെ കൂടെ വേണം എന്ന് ഞാൻ തിരിച്ചറിയുന്നു 💖<br><br>
+
+      ജീവിതം എവിടെ കൊണ്ടുപോയാലും,<br>
+      ഞാൻ നിന്നെ തന്നെ തിരഞ്ഞടുക്കും — എല്ലായ്പ്പോഴും ❤️
+    </p>
+
+    <button onclick="window.location.href='marry-me.html'">
+      ഒരു ചോദ്യം ഉണ്ടേ… 💍
+    </button>
+  </div>
+
+</body>
+</html>
