@@ -1,57 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Will You Marry Me? 💍</title>
+  <title>Will You Marry Me 💍</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      color: #ff2f68;
-    }
-
-    button {
-      margin: 10px;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .yes {
-      background: #ff2f68;
-      color: white;
-    }
-
-    .no {
-      background: #f1f1f1;
-    }
-  </style>
 </head>
-<body>
 
-  <div class="box">
+<body style="
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+">
+
+  <div style="background:white;padding:30px;border-radius:20px;">
     <h1>Will you marry me? 💍❤️</h1>
-    <button class="yes" onclick="yes()">YES 💖</button>
-    <button class="no" onclick="move(this)">NO 🙈</button>
+    <button onclick="yes()" style="padding:10px 20px;">YES 💖</button>
+    <button onclick="move(this)" style="padding:10px 20px;">NO 🙈</button>
   </div>
 
   <script>
