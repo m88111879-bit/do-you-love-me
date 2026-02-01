@@ -7,13 +7,12 @@ yesBtn.addEventListener("click", () => {
   music.volume = 0.7;
   music.play();
 
-  question.innerText = "I love you so much 😍❤️";
+  question.innerText = "എനിക്ക് നിന്നെ വളരെ ഇഷ്ടമാണ് 😚❤️";
   yesBtn.style.display = "none";
   noBtn.style.display = "none";
 
   startHearts();
 
-  // Go to love letter page after 5 seconds
   setTimeout(() => {
     window.location.href = "love-letter.html";
   }, 5000);
@@ -25,7 +24,6 @@ noBtn.addEventListener("touchstart", () => {
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
-// 💓 Floating hearts
 function startHearts() {
   setInterval(() => {
     const heart = document.createElement("div");
@@ -35,8 +33,6 @@ function startHearts() {
     heart.style.fontSize = Math.random() * 20 + 15 + "px";
     document.body.appendChild(heart);
 
-    setTimeout(() => {
-      heart.remove();
-    }, 4000);
+    setTimeout(() => heart.remove(), 4000);
   }, 300);
 }
