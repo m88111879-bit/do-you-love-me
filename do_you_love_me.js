@@ -74,7 +74,7 @@ function startCountdown(seconds) {
 
     if (time <= 0) {
       clearInterval(timer);
-      window.location.href = "love-letter.html";
+      window.location.href = "proposal.html";
     }
   }, 1000);
 }
