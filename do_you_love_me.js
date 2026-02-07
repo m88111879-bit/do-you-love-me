@@ -48,7 +48,7 @@ yesBtn.addEventListener("click", () => {
   romanticBox.style.display = "block";
 
   startRoses();
-  startCountdown(60);
+  startCountdown(90);
 
   typeWords(malayalamPoem, () => {
     typingEl.innerHTML += "<br><br>";
