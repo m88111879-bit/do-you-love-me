@@ -1,38 +1,36 @@
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 const music = document.getElementById("bg-music");
-const question = document.getElementById("question");
 
 yesBtn.addEventListener("click", () => {
   music.volume = 0.7;
-  music.play();
+  music.play(); // 🎵 start song
 
-  question.innerText = "എനിക്ക് നിന്നെ വളരെ ഇഷ്ടമാണ് 😚❤️";
   yesBtn.style.display = "none";
   noBtn.style.display = "none";
 
-  startHearts();
+  startRoses();
 
+  // ⏳ WAIT 30 SECONDS before next page
   setTimeout(() => {
-    window.location.href = "love-letter.html?v=1";
-  }, 5000);
+    window.location.href = "love-letter.html?v=2";
+  }, 30000); // 30,000 ms = 30 seconds
 });
 
 noBtn.addEventListener("touchstart", () => {
-  const x = Math.random() * 140 - 70;
-  const y = Math.random() * 140 - 70;
+  const x = Math.random() * 120 - 60;
+  const y = Math.random() * 120 - 60;
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
-function startHearts() {
+// 🌹 Rose animation
+function startRoses() {
   setInterval(() => {
     const rose = document.createElement("div");
     rose.innerHTML = "🌹";
-    rose.style.position = "fixed";
-    rose.style.top = "-20px";
+    rose.className = "rose";
     rose.style.left = Math.random() * 100 + "vw";
     rose.style.fontSize = "24px";
-    rose.style.animation = "fall 5s linear";
     document.body.appendChild(rose);
 
     setTimeout(() => rose.remove(), 5000);
