@@ -6,16 +6,7 @@ const romanticBox = document.getElementById("romantic-box");
 const countdownEl = document.getElementById("countdown");
 const typingEl = document.getElementById("typing");
 
-/* 🌸 Malayalam poem */
-const malayalamPoem = [
-  "അറിയാതെല്ലെ", "നീ,",
-  "നീ", "നിറയാത്ത",
-  "നിമിഷവും",
-  "നേരുമില്ലെൻ",
-  "ദിനങ്ങളിൽ..!"
-];
-
-/* 🌙 English poem */
+/* 🌙 FULL English Poetry */
 const englishPoem = [
   "In","the","moonlit","dance","of","whispered","dreams,",
   "Our","hearts","entwined,","a","symphony","it","seems.",
@@ -38,6 +29,7 @@ const englishPoem = [
   "We","find","a","love","that","transcends","all","times."
 ];
 
+/* ❤️ YES button */
 yesBtn.addEventListener("click", () => {
   music.volume = 0.7;
   music.play();
@@ -48,14 +40,11 @@ yesBtn.addEventListener("click", () => {
   romanticBox.style.display = "block";
 
   startRoses();
-  startCountdown(90);
-
-  typeWords(malayalamPoem, () => {
-    typingEl.innerHTML += "<br><br>";
-    typeWords(englishPoem);
-  });
+  startCountdown(90); // ⏳ 1 min 30 sec
+  typeWords(englishPoem);
 });
 
+/* 😜 NO button逃 */
 noBtn.addEventListener("touchstart", () => {
   const x = Math.random() * 120 - 60;
   const y = Math.random() * 120 - 60;
@@ -74,7 +63,7 @@ function startRoses() {
   }, 400);
 }
 
-/* ⏳ Countdown – 1 minute */
+/* ⏳ Countdown */
 function startCountdown(seconds) {
   let time = seconds;
   countdownEl.innerText = `⏳ ${time}`;
@@ -91,14 +80,13 @@ function startCountdown(seconds) {
 }
 
 /* 💌 Word-by-word typing */
-function typeWords(words, callback) {
+function typeWords(words) {
   let i = 0;
   const typer = setInterval(() => {
     typingEl.innerHTML += words[i] + " ";
     i++;
     if (i >= words.length) {
       clearInterval(typer);
-      if (callback) setTimeout(callback, 1500);
     }
-  }, 600);
+  }, 600); // smooth romantic speed
 }
