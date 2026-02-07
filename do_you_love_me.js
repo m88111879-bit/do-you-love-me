@@ -26,13 +26,15 @@ noBtn.addEventListener("touchstart", () => {
 
 function startHearts() {
   setInterval(() => {
-    const heart = document.createElement("div");
-    heart.innerHTML = "💖";
-    heart.classList.add("heart");
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 15 + "px";
-    document.body.appendChild(heart);
+    const rose = document.createElement("div");
+    rose.innerHTML = "🌹";
+    rose.style.position = "fixed";
+    rose.style.top = "-20px";
+    rose.style.left = Math.random() * 100 + "vw";
+    rose.style.fontSize = "24px";
+    rose.style.animation = "fall 5s linear";
+    document.body.appendChild(rose);
 
-    setTimeout(() => heart.remove(), 4000);
-  }, 300);
+    setTimeout(() => rose.remove(), 5000);
+  }, 400);
 }
