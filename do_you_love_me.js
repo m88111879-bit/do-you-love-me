@@ -2,19 +2,27 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 const music = document.getElementById("bg-music");
 
+const romanticBox = document.getElementById("romantic-box");
+const countdownEl = document.getElementById("countdown");
+const typingEl = document.getElementById("typing");
+
+const text =
+  "Every moment with you feels like a beautiful dream. " +
+  "Your smile is my favorite place to stay, " +
+  "your presence my calm, " +
+  "and your love my forever. 🌹❤️";
+
 yesBtn.addEventListener("click", () => {
   music.volume = 0.7;
-  music.play(); // 🎵 start song
+  music.play(); // 🎵 start music
 
   yesBtn.style.display = "none";
   noBtn.style.display = "none";
 
+  romanticBox.style.display = "block";
   startRoses();
-
-  // ⏳ WAIT 30 SECONDS before next page
-  setTimeout(() => {
-    window.location.href = "love-letter.html?v=2";
-  }, 30000); // 30,000 ms = 30 seconds
+  startCountdown(30);
+  typeWords(text.split(" "));
 });
 
 noBtn.addEventListener("touchstart", () => {
@@ -23,7 +31,7 @@ noBtn.addEventListener("touchstart", () => {
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
 
-// 🌹 Rose animation
+// 🌹 Falling roses
 function startRoses() {
   setInterval(() => {
     const rose = document.createElement("div");
@@ -34,5 +42,31 @@ function startRoses() {
     document.body.appendChild(rose);
 
     setTimeout(() => rose.remove(), 5000);
+  }, 400);
+}
+
+// ⏳ Countdown
+function startCountdown(seconds) {
+  let time = seconds;
+  countdownEl.innerText = `⏳ ${time}`;
+
+  const timer = setInterval(() => {
+    time--;
+    countdownEl.innerText = `⏳ ${time}`;
+
+    if (time <= 0) {
+      clearInterval(timer);
+      window.location.href = "love-letter.html?v=3";
+    }
+  }, 1000);
+}
+
+// 💌 Word-by-word typing
+function typeWords(words) {
+  let i = 0;
+  const typer = setInterval(() => {
+    typingEl.innerHTML += words[i] + " ";
+    i++;
+    if (i >= words.length) clearInterval(typer);
   }, 400);
 }
