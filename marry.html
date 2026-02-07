@@ -1,38 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Will You Marry Me 💍</title>
+  <title>She Said YES 💍❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe6ea, #ffd1dc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 340px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease;
+      z-index: 2;
+    }
+
+    h1 {
+      color: #b0003a;
+      margin-bottom: 10px;
+    }
+
+    .love-gif {
+      width: 200px;
+      border-radius: 15px;
+      margin: 15px auto;
+      display: block;
+    }
+
+    .final-line {
+      margin-top: 15px;
+      font-size: 17px;
+      color: #7a0030;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* 💖 Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: 0;
+      font-size: 22px;
+      animation: floatUp 4s linear;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
 </head>
+<body>
 
-<body style="
-  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Arial, sans-serif;
-">
+  <div class="box">
+    <h1>She said YES 💍❤️</h1>
 
-  <div style="background:white;padding:30px;border-radius:20px;">
-    <h1>Will you marry me? 💍❤️</h1>
-    <button onclick="yes()" style="padding:10px 20px;">YES 💖</button>
-    <button onclick="move(this)" style="padding:10px 20px;">NO 🙈</button>
+    <!-- 💖 Cute animated GIF -->
+    <img
+  src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUydjQweTh4djZyZXBoaXQ5MWRrM3BpOXJsbHB3c3plMmZhNmwxaXI4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y9bboRSDSw0CezsCji/giphy.gif"
+  alt="Love"
+  class="love-gif"
+/>
+
+<img
+  src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMTk4d3FsbW8weTZkeG83dng1NzdmaDFnNWFubHQyN2N0Z2IwMWNyaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f9EmXxglhdhAj1bo28/giphy.gif"
+  alt="Love"
+  class="love-gif"
+/>
+
+    <p class="final-line">
+      From this moment on,<br>
+      it’s you and me — forever 💖<br><br>
+      I love you endlessly.
+    </p>
   </div>
 
+  <!-- 💞 Floating hearts -->
   <script>
-    function yes() {
-      document.body.innerHTML =
-        "<h1>She said YES 😭💍❤️<br>Forever starts now.</h1>";
-    }
-
-    function move(btn) {
-      btn.style.position = "absolute";
-      btn.style.left = Math.random() * 80 + "vw";
-      btn.style.top = Math.random() * 80 + "vh";
-    }
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.innerHTML = "💖";
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
+    }, 600);
   </script>
 
 </body>
