@@ -26,7 +26,7 @@ const englishPoem = [
   "Through","the","pages","of","our","shared","refrain,",
   "In","your","arms,","life's","worries","wane.",
   "For","in","this","dance","of","hearts","and","rhymes,",
-  "We","find","a","love","that","transcends","all","times.❤️❤️"
+  "We","find","a","love","that","transcends","all","times.","❤️","❤️",
 ];
 
 /* ❤️ YES button */
