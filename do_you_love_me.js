@@ -73,7 +73,14 @@ function startCountdown(seconds) {
     countdownEl.innerText = `⏳ ${time}`;
 
     if (time <= 0) {
-      clearInterval(timer);
+  clearInterval(timer);
+
+  // show romantic box content
+  document.getElementById("countdown").innerText = "💖";
+
+  // show the button ONLY after countdown
+  document.getElementById("open-letter").style.display = "inline-block";
+    }
     }
   }, 1000);
 }
