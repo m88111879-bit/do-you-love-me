@@ -1,3 +1,4 @@
+// 🎯 Elements
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const music = document.getElementById("bg-music");
@@ -7,30 +8,36 @@ const countdownEl = document.getElementById("countdown");
 const typingEl = document.getElementById("typing");
 const openLetterBtn = document.getElementById("open-letter");
 
-// soft vibration
+// 📳 Soft vibration
 function softVibrate() {
   if (navigator.vibrate) {
     navigator.vibrate([80, 40, 80]);
   }
 }
 
-// YES button logic
+// ❤️ YES button
 yesBtn.addEventListener("click", () => {
   softVibrate();
 
+  // play music (allowed only after user click)
   music.volume = 0.7;
-  music.play();
+  music.play().catch(() => {});
 
+  // hide buttons
   yesBtn.style.display = "none";
   noBtn.style.display = "none";
 
+  // show romantic section
   romanticBox.style.display = "block";
 
+  // start countdown (1 min 30 sec)
   startCountdown(90);
+
+  // start typing effect
   startTyping();
 });
 
-// NO button playful move
+// 😅 NO button (playful escape)
 noBtn.addEventListener("click", () => {
   softVibrate();
   noBtn.style.position = "absolute";
@@ -38,7 +45,7 @@ noBtn.addEventListener("click", () => {
   noBtn.style.top = Math.random() * 80 + "vh";
 });
 
-// countdown
+// ⏳ Countdown
 function startCountdown(seconds) {
   let time = seconds;
   countdownEl.innerText = `⏳ ${time}`;
@@ -55,7 +62,7 @@ function startCountdown(seconds) {
   }, 1000);
 }
 
-// typing text
+// ✍️ Typing effect
 function startTyping() {
   const text =
     "I wrote this slowly, softly, and honestly… because you matter to me ❤️";
@@ -69,12 +76,10 @@ function startTyping() {
     if (i >= text.length) clearInterval(typer);
   }, 80);
 }
-const openLetterBtn = document.getElementById("open-letter");
 
+// 💌 Open love letter page
 openLetterBtn.addEventListener("click", () => {
-  if (navigator.vibrate) {
-    navigator.vibrate([80, 40, 80]);
-  }
+  softVibrate();
   setTimeout(() => {
     window.location.href = "love-letter.html";
   }, 300);
