@@ -69,3 +69,13 @@ function startTyping() {
     if (i >= text.length) clearInterval(typer);
   }, 80);
 }
+const openLetterBtn = document.getElementById("open-letter");
+
+openLetterBtn.addEventListener("click", () => {
+  if (navigator.vibrate) {
+    navigator.vibrate([80, 40, 80]);
+  }
+  setTimeout(() => {
+    window.location.href = "love-letter.html";
+  }, 300);
+});
