@@ -5,38 +5,85 @@
   <title>Happy Propose Day 💍</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
   <link rel="stylesheet" href="do_you_love_me.css" />
+
+  <style>
+    body {
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .buttons button {
+      font-size: 18px;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .yes-btn {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no-btn {
+      background: #ddd;
+      color: #444;
+    }
+
+    .name {
+      color: #ff0055;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
+
   <div class="container">
 
     <h1 id="question">
-      Happy Propose Day 💍 <br />
-      <span class="name">KUNJUUUUU</span>, will you be my girl? ❤️
+      Happy Propose Day 💍<br />
+      <span class="name">KUNJUUUUU</span>, will you choose me? ❤️
     </h1>
 
+    <!-- YES / NO buttons -->
     <div class="buttons">
       <button class="yes-btn" id="yesBtn">Yes 💖</button>
       <button class="no-btn" id="noBtn">No 🙈</button>
     </div>
 
-    <!-- Romantic section (hidden initially) -->
-    <div id="romantic-box" style="display:none;">
+    <!-- Romantic section (hidden at start) -->
+    <div id="romantic-box" style="display:none; margin-top:30px;">
       <p id="countdown" class="countdown"></p>
       <p id="typing" class="typing"></p>
 
-      <button id="open-letter" style="display:none;">
+      <!-- Button to open second page -->
+      <button
+        id="open-letter"
+        style="display:none; margin-top:20px; font-size:16px; padding:10px 22px; border-radius:20px; border:none; background:#ff7aa2; color:white; cursor:pointer;">
         Read my letter 💌
       </button>
     </div>
 
   </div>
 
-  <!-- Background Music -->
+  <!-- 🎵 Background Music -->
   <audio id="bg-music" src="Merge_Ee-Kattu-Vannu_1.mp3" preload="auto"></audio>
 
-  <!-- JS (IMPORTANT: must be LAST) -->
+  <!-- ✅ JavaScript (MUST be last) -->
   <script src="do_you_love_me.js"></script>
+
 </body>
 </html>
