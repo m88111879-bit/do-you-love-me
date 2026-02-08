@@ -96,3 +96,9 @@ function typeWords(words) {
     }
   }, 600); // smooth romantic speed
 }
+function softVibrate() {
+  if (navigator.vibrate) {
+    // gentle romantic vibration pattern
+    navigator.vibrate([80, 40, 80]);
+  }
+}
