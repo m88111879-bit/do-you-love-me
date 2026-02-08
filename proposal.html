@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Will You Marry Me? 💍</title>
+  <title>Just a small question 🍓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
-      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      background: linear-gradient(135deg, #fff1f5, #ffe4ec);
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -19,13 +19,21 @@
     .box {
       background: white;
       padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      border-radius: 25px;
+      max-width: 340px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      animation: fadeIn 2s ease;
     }
 
-    h1 {
+    h2 {
       color: #b0003a;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
     }
 
     button {
@@ -33,26 +41,39 @@
       margin: 10px;
       border: none;
       border-radius: 25px;
-      font-size: 16px;
+      font-size: 15px;
       cursor: pointer;
     }
 
-    .yes {
-      background: #ff4d6d;
+    .ok {
+      background: #ff7aa2;
       color: white;
     }
 
-    .no {
-      background: #ddd;
+    .think {
+      background: #f0f0f0;
+      color: #444;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
 
   <div class="box">
-    <h1>Will you marry me? 💍❤️</h1>
-    <button class="yes" onclick="yes()">YES 💖</button>
-    <button class="no" onclick="move(this)">NO 🙈</button>
+    <h2>Can we choose each other… slowly? 🍓</h2>
+
+    <p>
+      No rush.  
+      No pressure.  
+      I just wanted to be honest with you.
+    </p>
+
+    <button class="ok" onclick="yes()">Okay… 💗</button>
+    <button class="think" onclick="think()">Let me think 🌼</button>
   </div>
 
   <script>
@@ -60,10 +81,8 @@
       window.location.href = "marry.html";
     }
 
-    function move(btn) {
-      btn.style.position = "absolute";
-      btn.style.left = Math.random() * 80 + "vw";
-      btn.style.top = Math.random() * 80 + "vh";
+    function think() {
+      alert("That’s perfectly okay 😊\nTake all the time you need.");
     }
   </script>
 
