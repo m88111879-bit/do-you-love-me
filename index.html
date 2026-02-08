@@ -6,32 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="do_you_love_me.css" />
 </head>
+
 <body>
 
   <div class="container">
-    <h1 id="question">
-  Happy Rose Day 🌹<br>
-  <span class="name">Kunjuuuu </span>, will you be my rose forever? ❤️
-    </h1>
-    <div class="buttons">
-  <button class="yes-btn">Yes</button>
-  <button class="no-btn">No</button>
-</div>
 
-<!-- 💖 Romantic Countdown & Typing -->
-<div id="romantic-box" style="display:none;">
-  <p id="countdown" class="countdown"></p>
-  <p id="typing" class="typing"></p>
-</div>
-    
-<button id="open-letter" style="display:none;"
-  onclick="window.location.href='love-letter.html'">
-  Read my letter 💌
-</button>
+    <h1 id="question">
+      Happy Propose Day 💍<br>
+      <span class="name">Xunjusuu</span>, will you be my girl ❤️
+    </h1>
+
+    <div class="buttons">
+      <button class="yes-btn" id="yesBtn">Yes 💖</button>
+      <button class="no-btn" id="noBtn">No 🙈</button>
+    </div>
+
+    <!-- 💓 Countdown & Typing -->
+    <div id="romantic-box" style="display:none;">
+      <p id="countdown" class="countdown"></p>
+      <p id="typing" class="typing"></p>
+
+      <!-- 💌 Button appears AFTER countdown -->
+      <button
+        id="open-letter"
+        style="display:none;"
+        onclick="softVibrate(); setTimeout(() => { window.location.href='love-letter.html'; }, 300);">
+        Read my letter 💌
+      </button>
+    </div>
+
   </div>
 
-  <!-- 🎵 MUSIC (must be inside body) -->
+  <!-- 🎵 Background Music -->
   <audio id="bg-music" src="Merge_Ee-Kattu-Vannu_1.mp3" preload="auto"></audio>
+
+  <!-- JS -->
   <script src="do_you_love_me.js"></script>
+
 </body>
 </html>
